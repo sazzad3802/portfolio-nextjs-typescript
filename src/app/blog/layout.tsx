@@ -17,14 +17,16 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <header className="blog-header">
                     <div className="blog-title-container">
                         <h1 className="blog-title">Shazzad Hossain Kanon</h1>
-                    </div>
+                    </div>  
                     
                     {/* Horizontal Navigation */}
                     <nav className="horizontal-nav">
                         <Link href="/blog" className={currentSegment === 'blog' ? 'active' : ''}>HOME</Link>
                         <Link href="/blog/academic" className={currentSegment === 'academic' ? 'active' : ''}>ACADEMIC</Link>
-                        <Link href="/blog/highlights" className={currentSegment === 'highlights' ? 'active' : ''}>HIGHLIGHTS</Link>
+                        <Link href="/blog/highlights" className={currentSegment === 'highlights' ? 'active' : ''}>TECH AFFAIRS</Link>
                         <Link href="/blog/projects" className={currentSegment === 'projects' ? 'active' : ''}>PROJECTS</Link>
+                        <Link href="/blog/projects" className={currentSegment === 'projects' ? 'active' : ''}>RESEARCH</Link>
+                        <Link href="/blog/projects" className={currentSegment === 'projects' ? 'active' : ''}>PERSONAL BLOG</Link>
                         <Link href="/blog/contact" className={currentSegment === 'contact' ? 'active' : ''}>CONTACT</Link>
                         
                     </nav>
