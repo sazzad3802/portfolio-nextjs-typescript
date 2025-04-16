@@ -25,7 +25,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                         <Link href="/blog/academic" className={currentSegment === 'academic' ? 'active' : ''}>ACADEMIC</Link>
                         <Link href="/blog/highlights" className={currentSegment === 'highlights' ? 'active' : ''}>HIGHLIGHTS</Link>
                         <Link href="/blog/projects" className={currentSegment === 'projects' ? 'active' : ''}>PROJECTS</Link>
-                        <Link href="/blog/about" className={currentSegment === 'about' ? 'active' : ''}>ABOUT</Link>
+                        <Link href="/blog/contact" className={currentSegment === 'contact' ? 'active' : ''}>CONTACT</Link>
                         
                     </nav>
                 </header>
