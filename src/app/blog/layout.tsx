@@ -10,9 +10,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   
     // Extract the current segment from the path
     const currentSegment = pathname?.split('/').pop() || '';
-    const formattedSegment = currentSegment 
-        ? currentSegment.charAt(0).toUpperCase() + currentSegment.slice(1)
-        : 'Home';
     
     return (
         <div className="container">
@@ -20,7 +17,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                 <header className="blog-header">
                     <div className="blog-title-container">
                         <h1 className="blog-title">Shazzad Hossain Kanon</h1>
-                        <p className="blog-subtitle">Software Engineer</p>
                     </div>
                     
                     {/* Horizontal Navigation */}
@@ -30,14 +26,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
                         <Link href="/blog/highlights" className={currentSegment === 'highlights' ? 'active' : ''}>HIGHLIGHTS</Link>
                         <Link href="/blog/projects" className={currentSegment === 'projects' ? 'active' : ''}>PROJECTS</Link>
                         <Link href="/blog/about" className={currentSegment === 'about' ? 'active' : ''}>ABOUT</Link>
-                        <div className="search-icon">
-                            <Image 
-                                src="/search-icon.svg" 
-                                alt="Search"
-                                width={20}
-                                height={20}
-                            />
-                        </div>
+                        
                     </nav>
                 </header>
             </div>

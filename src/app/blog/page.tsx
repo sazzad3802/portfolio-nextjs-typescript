@@ -18,7 +18,7 @@ export default function BlogPage() {
         <div className="content-left">
         <div className="welcome-row">
             <h2>Thanks for stopping by!</h2>
-            <div className="gif-container">
+            {/* <div className="gif-container">
                 <Image
                 src="/images/welcome.gif"
                 alt="Excited animation"
@@ -27,7 +27,7 @@ export default function BlogPage() {
                 unoptimized={true}
                 priority
                 />
-            </div>
+            </div> */}
             </div>
 
 
@@ -61,6 +61,14 @@ export default function BlogPage() {
               height={400}
               className="author-image"
             />
+          </div>
+
+          <div className="quote-container">
+            <div className="quote-mark">“</div>
+            <p className="quote-text">
+              Life is never fair, and perhaps it is a good thing for most of us that it is not.
+            </p>
+            <div className="quote-author">- Oscar Wilde</div>
           </div>
           
         </div>

@@ -25,15 +25,21 @@
 }
 
 .blog-title {
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   margin: 0;
   font-weight: 600;
+  color: #222;
+  letter-spacing: 0.5px;
 }
 
 .blog-subtitle {
+  font-family: 'EB Garamond', serif;
   font-size: 1rem;
   color: #666;
   margin: 0.25rem 0 0 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 .horizontal-nav {
@@ -44,18 +50,25 @@
 }
 
 .horizontal-nav a {
+  font-family: 'EB Garamond', serif;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 0.95rem;
+  color: #666;
+  font-weight: 400;
+  font-size: 1rem;
   white-space: nowrap;
   position: relative;
   padding: 0.5rem 0;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.horizontal-nav a:hover {
+  color: #333;
 }
 
 .horizontal-nav a.active {
-  color: #000;
-  font-weight: 600;
+  color: #222;
+  font-weight: 500;
 }
 
 .horizontal-nav a.active::after {
@@ -64,8 +77,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: #000;
+  height: 1px;
+  background-color: #222;
+  transition: all 0.3s ease;
 }
 
 .search-icon {
@@ -73,6 +87,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.search-icon:hover {
+  opacity: 0.8;
 }
 
 .main-content {
@@ -83,8 +102,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .header-container,
-  .main-content {
+  .header-container {
       width: 90%;
       padding: 0 5%;
   }
@@ -108,8 +126,7 @@
       padding-bottom: 0.5rem;
   }
   
-  .header-container,
-  .main-content {
+  .header-container {
       width: 94%;
       padding: 0 3%;
   }
@@ -172,10 +189,6 @@
   margin: 1rem 0;
 }
 
-.welcome-row h2 {
-  margin-bottom: 5vh;
-  white-space: nowrap;
-}
 
 .gif-container {
   flex-shrink: 0;
@@ -191,9 +204,84 @@
 }
 
 .home-description p {
-  font-family: var(--font-roboto);
-  font-weight: 400;
-  line-height: 1.6;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
+  color: #444;
+  letter-spacing: 0.2px;
 }
 
+
+
+
+/* Minimal Quote Container */
+.quote-container {
+  text-align: center;
+  background: white;
+  margin-top: -10vh;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  quotes: "❝" "❞" "'" "'";
+  position: relative;
+  padding: 0 2rem;
+}
+
+.quote-text::before {
+  content: open-quote;
+  font-size: 5rem;
+  color: #ddd;
+  position: absolute;
+  left: -1rem;
+  top: -2.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.quote-text::after {
+  content: close-quote;
+  font-size: 4rem;
+  color: #ddd;
+  position: absolute;
+  right: -1rem;
+  bottom: -2.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.quote-author {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .right-column {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .quote-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+    padding: 0 1.5rem;
+  }
+
+  .quote-text::before,
+  .quote-text::after {
+    font-size: 3rem;
+  }
+}
